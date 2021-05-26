@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background-color: pink;
+}
+/* 大盒子旋转 */
+.max-box{
+    width: 200px;
+    height: 200px;
+    margin: 300px auto;
+    /* 子元素开启立体空间 */
+    transform-style: preserve-3d;
+    animation: move 5s linear infinite;
+}
+/* 动画 */
+@keyframes move {
+    0%{
+        transform: rotateX(13deg) rotateY(0deg);
+    }
+    100%{
+        transform:  rotateX(13deg) rotateY(360deg);
+    }
+}
+ul{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    
+    
+}
+ol{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateY(-145px) translateX(50px) translateZ(0px);
+}
+ul li{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    opacity: 0.5;
+    transition: all .7s;
+    
+}
+ol li{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+/* 外面正方体 */
+ul li:nth-child(1){
+    background: url(./QQ1.jpg) no-repeat;
+    background-size: cover;
+    transform: translateZ(100px);
+}
+ul li:nth-child(2){
+    background: url(./QQ1.jpg) no-repeat;
+    background-size: cover;
+    transform: translateZ(-100px);
+}
+ul li:nth-child(3){
+    background: url(./QQ1.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateY(90deg) translateZ(100px);
+}
+ul li:nth-child(4){
+    background: url(./QQ1.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateY(90deg) translateZ(-100px);
+}
+ul li:nth-child(5){
+    background: url(./mm1.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateX(90deg) translateZ(100px);
+}
+ul li:nth-child(6){
+    background: url(./mm1.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateX(90deg) translateZ(-100px);
+}
+
+/* hover属性 */
+.max-box:hover ul li:nth-child(1){
+    transform: translateZ(300px) scale(2,2);
+    opacity: 0.9;
+}
+.max-box:hover ul li:nth-child(2){
+    transform: translateZ(-300px)  scale(2,2);
+    opacity: 0.9;
+}
+.max-box:hover ul li:nth-child(3){
+    transform: rotateY(90deg) translateZ(300px)  scale(2,2);
+    opacity: 0.9;
+}
+.max-box:hover ul li:nth-child(4){
+    transform: rotateY(90deg) translateZ(-300px)  scale(2,2);
+    opacity: 0.9;
+}
+.max-box:hover ul li:nth-child(5){
+    transform: rotateX(90deg) translateZ(300px)  scale(2,2);
+    opacity: 0.9;
+}
+.max-box:hover ul li:nth-child(6){
+    transform: rotateX(90deg) translateZ(-300px)  scale(2,2);
+    opacity: 0.9;
+}
+
+/* 内部小盒子 */
+ol li:nth-child(1){
+    background: url(./QQ21.jpg) no-repeat;
+    background-size: cover;
+    transform: translateZ(50px);
+}
+ol li:nth-child(2){
+    background: url(./mm2.jpg) no-repeat;
+    background-size: cover;
+    transform: translateZ(-50px);
+}
+ol li:nth-child(3){
+    background: url(./QQ21.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateY(90deg) translateZ(50px);
+}
+ol li:nth-child(4){
+    background: url(./QQ21.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateY(90deg) translateZ(-50px);
+}
+ol li:nth-child(5){
+    background: url(./mm2.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateX(90deg) translateZ(50px);
+}
+ol li:nth-child(6){
+    background: url(./mm2.jpg) no-repeat;
+    background-size: cover;
+    transform: rotateX(90deg) translateZ(-50px);
+}
